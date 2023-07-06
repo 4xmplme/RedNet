@@ -1,13 +1,368 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <title>MyBiKE</title>
+    <link rel="icon" href="./images/favicon.svg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="true"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.scss">
+    <script src="./scripts/script.js" defer></script>
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+  <body class="page__body">
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="top-bar">
+            <a href="#" class="top-bar__logo">
+              <img
+                src="./images/logo-wide.svg"
+                alt="MyBiKE logo"
+                class="top-bar__logo-image"
+              >
+            </a>
+            <div class="top-bar__icons">
+              <a href="tel:+380 44 377-77-66" class="icon icon--phone header__call"></a>
+              <a href="#menu" class="icon icon--menu header__menu"></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <h1 class="header__title" data-aos="zoom-in-up">Інтернет-провайдер</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside class="page__menu menu" id="menu">
+      <div class="container">
+        <div class="menu__content">
+          <div class="top-bar menu__top">
+            <a href="#" class="top-bar__logo">
+              <img
+                src="./images/logo-wide.svg"
+                alt="MyBiKE logo"
+                class="top-bar__logo-image top-bar__logo-image--menu"
+              >
+            </a>
+            <a href="#" class="icon icon--close"></a>
+          </div>
+          <div class="menu__bottom">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#" class="nav__link">Головна</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#about-us" class="nav__link">Про нас</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#advantages" class="nav__link">Наші переваги</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#tariffs" class="nav__link">Тарифи</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contacts" class="nav__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <a href="tel:+380 44 377-77-66" class="menu__phone-number">
+              +380 44 377-77-66
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="container">
+        <div class="main__content">
+          <section class="about-us" id="about-us">
+            <h2
+              class="
+                about-us__title
+                section-title
+                section-title--align--left
+              "
+              data-aos="fade-down"
+            >
+              Ви шукали швидкісний інтернет через оптичний кабель?
+            </h2>
+
+            <p class="about-us__content" data-aos="fade-up">
+              Інтернет провайдер ХомЛінк може підключити вам в квартиру або в приватний будинок оптичний інтернет за
+              найвигіднішими тарифами!
+            </p>
+          </section>
+
+          <section class="advantages" id="advantages">
+            <h2 class="section-title" data-aos="zoom-in-up">Наші переваги</h2>
+
+            <div class="advantages__content">
+              <article class="advantages__item advantage" data-aos="fade-right">
+                <a href="#" class="advantage__link">
+                  <img
+                    src="./images/advantages/rocket.svg"
+                    alt="advantage photo"
+                    class="advantage__photo"
+                  >
+                </a>
+                <h3 class="advantage__name">Швидкість підключення до 1 Гбіт</h3>
+                <p class="advantage__description">
+                  Найвища швидкість доступу, яка в сотні разів швидше, ніж на мобільному інтернет
+                </p>
+              </article>
+
+              <article class="advantages__item advantage" data-aos="zoom-in">
+                <a href="#" class="advantage__link">
+                  <img
+                    src="./images/advantages/globe.svg"
+                    alt="advantage photo"
+                    class="advantage__photo"
+                  >
+                </a>
+                <h3 class="advantage__name">Безлімітні тарифи</h3>
+                <p class="advantage__description">
+                  Повністю безлімітні тарифні плани без прихованих обмежень за обсягом отриманої або відправленої
+                  інформації
+                </p>
+              </article>
+
+              <article class="advantages__item advantage" data-aos="fade-up">
+                <a href="#" class="advantage__link">
+                  <img
+                    src="./images/advantages/support.svg"
+                    alt="advantage photo"
+                    class="advantage__photo"
+                  >
+                </a>
+                <h3 class="advantage__name">Кваліфікована підтримка</h3>
+                <p class="advantage__description">
+                  Наша інформаційна та технічна підтримка завжди допоможе вирішити будь-які завдання в найкоротші
+                  терміни
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <section class="tariffs" id="tariffs">
+            <h2 class="section-title" data-aos="zoom-in-up">Тарифи</h2>
+
+            <div class="tariffs__content">
+              <article class="tariff">
+                <div class="tariff__photos">
+                  <a
+                    href="#"
+                    class="tariff__link tariff__link--wide"
+                    data-aos="zoom-out-right"
+                  >
+                    <img
+                      src="./images/tariffs/1.webp"
+                      alt="tariff photo"
+                      class="tariff__photo"
+                    >
+                  </a>
+
+                  <a
+                    href="#"
+                    class="tariff__link tariff__link--square"
+                    data-aos="zoom-in"
+                  >
+                    <img
+                    src="./images/tariffs/2.webp"
+                    alt="tariff photo"class="tariff__photo">
+                  </a>
+                </div>
+
+                <div class="tariff__description" data-aos="fade-right">
+                  <h3 class="tariff__title">Auto Unlock</h3>
+                  <p class="tariff__text">
+                    The app senses when you're nearby to unlock automatically. GPS tracking so you know where your bike
+                    is and can track it anytime.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tariff">
+                <div class="tariff__photos">
+                  <a
+                    href="#"
+                    class="tariff__link tariff__link--wide"
+                    data-aos="zoom-out-right"
+                  >
+                    <img
+                      src="./images/tariffs/3.webp"
+                      alt="tariff photo"
+                      class="tariff__photo"
+                    >
+                  </a>
+
+                  <a
+                    href="#"
+                    class="tariff__link tariff__link--square"
+                    data-aos="zoom-in"
+                  >
+                    <img
+                      src="./images/tariffs/4.webp"
+                      alt="tariff photo"
+                      class="tariff__photo"
+                    >
+                  </a>
+                </div>
+
+                <div class="tariff__description" data-aos="fade-right">
+                  <h3 class="tariff__title">Range & Integrated lights</h3>
+                  <p class="tariff__text">
+                    The removable battery has up to 70km battery autonomy and weighs only 2.4 kg. Lights integrated into
+                    the frame give you always-on visibility day and night.
+                  </p>
+                </div>
+              </article>
+
+              <article class="tariff">
+                <div class="tariff__photos">
+                  <a
+                    href="#"
+                    class="tariff__link tariff__link--square"
+                    data-aos="zoom-out-right"
+                  >
+                    <img
+                      src="./images/tariffs/5.webp"
+                      alt="tariff photo"
+                      class="tariff__photo"
+                    >
+                  </a>
+
+                  <a
+                    href="#"
+                    class="tariff__link tariff__link--wide"
+                    data-aos="zoom-in"
+                  >
+                    <img
+                      src="./images/tariffs/6.webp"
+                      alt="tariff photo"
+                      class="tariff__photo"
+                    >
+                  </a>
+                </div>
+
+                <div class="tariff__description" data-aos="fade-right">
+                  <h3 class="tariff__title">Hydraulic disc brakes & Lightweight</h3>
+                  <p class="tariff__text">
+                    Brakes with total stopping power the second you make contact. The removable battery has up to 70km
+                    battery autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on
+                    visibility day and night.
+                  </p>
+                </div>
+              </article>
+
+              <div class="tariffs__button-wrapper" data-aos="zoom-in">
+                <a href="#" class="tariffs__button button">Підключити</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="contacts" id="contacts">
+            <h2 class="section-title contacts__title" data-aos="zoom-in-up">Зворотній зв'язок</h2>
+
+            <div class="contacts__content">
+              <form
+                action="#"
+                method="POST"
+                onsubmit="this.reset(); return false;"
+                id="form"
+                class="contacts__form contact-form"
+                data-aos="fade-right"
+              >
+                <input
+                  type="text"
+                  placeholder="Ім'я"
+                  required
+                  class="contact-form__input"
+                >
+
+                <input
+                  type="email"
+                  placeholder="Пошта"
+                  required
+                  class="contact-form__input"
+                >
+
+                <textarea
+                  placeholder="Повідомлення"
+                  rows="6"
+                  required
+                  class="contact-form__textarea"
+                ></textarea>
+
+                <button type="submit" class="contact-form__button button">Надіслати</button>
+              </form>
+
+              <div class="contacts__info info" data-aos="fade-up">
+                <div class="info__item">
+                  <h4 class="info__title">Телефон</h4>
+                  <a href="tel:+380 44 377-77-66" class="info__link">
+                    +380 44 377-77-66
+                  </a>
+                  <a href="tel:+380 67 673-12-40" class="info__link">
+                    +380 67 673-12-40
+                  </a>
+                  <a href="tel:+380 93 673-12-40" class="info__link">
+                    +380 93 673-12-40
+                  </a>
+                </div>
+
+                <div class="info__item">
+                  <h4 class="info__title">Пошта</h4>
+                  <a href="mailto:info@homelink.com.ua" class="info__link">
+                    info@homelink.com.ua
+                  </a>
+                </div>
+
+                <div class="info__item">
+                  <h4 class="info__title">Адреса</h4>
+                  <a
+                    href="https://goo.gl/maps/JXU7mJAPQCcp9XR66"
+                    target="_blank"
+                    class="info__link"
+                  >
+                    07800
+                    <br>
+                    смт. Бородянка,
+                    <br>
+                    вул. Леніна № 355, оф. 3
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2529.8382179936852!2d29.94613637542251!3d50.64869567307139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b3d4a15a138df%3A0xb8a08a91cc152269!2z0KLQntCSINCl0J7QnNCb0IbQndCa!5e0!3m2!1sru!2sua!4v1688503150407!5m2!1sru!2sua"
+          width="600"
+          height="450"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="footer__map"
+        ></iframe>
+    </footer>
   </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 300
+    });
+  </script>
 </html>

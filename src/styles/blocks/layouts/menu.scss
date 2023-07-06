@@ -1,0 +1,60 @@
+.menu {
+  height: 100vh;
+
+  background-color: $color-gray-primary;
+  color: $color-dark-primary;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: auto;
+
+  &__top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $color-gray-primary;
+  }
+
+  &__bottom {
+    padding-block: 24px;
+
+    @include onTablet {
+      padding-top: 8px;
+    }
+
+    @include onDesktop {
+      padding-top: 24px;
+    }
+  }
+
+  &__phone-number {
+    display: block;
+    width: fit-content;
+    margin-top: 40px;
+
+    font-size: 16px;
+    line-height: 1.69em;
+
+    @include onDesktop {
+      @include hover(scale, 1.1);
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      scale: 0;
+      transform-origin: left;
+
+      background-color: $color-dark-primary;
+      transition: scale $effect-duration ease-out;
+    }
+
+    &:hover::after {
+      scale: 100%;
+    }
+  }
+}
