@@ -1,5 +1,7 @@
 .about-us {
-  @include pageGrid;
+  &__inner {
+    @include pageGrid;
+  }
 
   &__title {
     grid-column: span 2;
