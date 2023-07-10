@@ -1,7 +1,6 @@
 .tariffs {
-
   &__content {
-    display: grid;
+    @include pageGrid;
     row-gap: 40px;
     margin-top: 48px;
 
@@ -12,27 +11,6 @@
 
     @include onDesktop {
       margin-top: 48px;
-    }
-  }
-
-  &__button-wrapper {
-    @include pageGrid;
-    margin-top: 40px;
-
-    @include onTablet {
-      margin-top: 48px;
-    }
-  }
-
-  &__button {
-    grid-column: 1 / -1;
-
-    @include onTablet {
-      grid-column: 2 / -2;
-    }
-
-    @include onDesktop {
-      grid-column: 5 / -5;
     }
   }
 }

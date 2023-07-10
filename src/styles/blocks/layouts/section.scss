@@ -1,0 +1,11 @@
+.section {
+  padding-block: 40px;
+
+  @include onTablet {
+    padding-block: 60px;
+  }
+
+  @include onTablet {
+    padding-block: 80px;
+  }
+}

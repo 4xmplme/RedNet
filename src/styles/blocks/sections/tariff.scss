@@ -1,49 +1,59 @@
 .tariff {
-  &__photos {
-    @include pageGrid;
+  grid-column: span 2;
+  position: relative;
+  display: grid;
+  row-gap: 32px;
+  padding: 32px 24px 16px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 16px rgba(126, 126, 131, 0.4);
+  // background-color: $color-dark-secondary;
+
+  @include onTablet {
+    grid-column: span 3;
   }
 
-  &__link {
-    position: relative;
-
-    &--wide {
-      @include onTablet {
-        grid-column: span 4;
-      }
-
-      @include onDesktop {
-        grid-column: span 8;
-      }
-    }
-
-    &--square {
-      height: 0;
-      padding-bottom: 100%;
-
-      @include onTablet {
-        grid-column: span 2;
-      }
-
-      @include onDesktop {
-        grid-column: span 4;
-      }
-    }
+  @include onDesktop {
+    grid-column: span 4;
   }
 
-  &__photo {
+  &__label {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    top: -8px;
+    right: 0;
+    padding: 8px 16px;
 
-    @include onDesktop {
-      @include hover(scale, 1.05);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      z-index: -1;
+
+      border: solid 8px transparent;
+      transform: rotate(180deg);
+    }
+
+    &--popular {
+      background-color: $color-red-primary;
+
+      &::before {
+        border-top-color: $color-red-secondary;
+      }
+    }
+
+    &--promotional {
+      background-color: $color-yellow-primary;
+
+      &::before {
+        border-top-color: $color-yellow-secondary;
+      }
     }
   }
 
   &__title {
-    margin-top: 16px;
-
     font-weight: 700;
     font-size: 24px;
     line-height: 1.4em;
@@ -55,5 +65,76 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.4em;
+  }
+
+  &__speed {
+    margin-top: 24px;
+
+    color: $color-red-primary;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.4em;
+
+    &::after {
+      content: "Швидкість";
+      display: block;
+      margin-top: 8px;
+
+      color: $color-white;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4em;
+    }
+  }
+
+  &__features-title {
+    font-weight: 600;
+  }
+
+  &__features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  &__features-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__features-item::before {
+    content: "";
+    @include squareIcon(8px);
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background-color: $color-red-primary;
+  }
+
+  &__bottom {
+    place-self: end normal;
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.4em;
+
+    &::after {
+      content: "грн/місяць";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4em;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
   }
 }
