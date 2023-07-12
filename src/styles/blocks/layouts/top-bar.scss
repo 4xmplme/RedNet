@@ -11,6 +11,7 @@
 
   &__logo {
     display: block;
+    // background-color: $color-red-primary;
 
     @include onDesktop {
       @include hover(scale, 1.1);

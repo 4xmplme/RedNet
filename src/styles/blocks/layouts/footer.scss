@@ -1,23 +1,22 @@
 .footer {
-  position: sticky;
-  bottom: 0;
-  z-index: -1;
-  height: 100vh;
+  // position: sticky;
+  // bottom: 0;
+  // z-index: -1;
+  // height: 100vh;
   // height: 200px;
-  background-image: url("../images/backgrounds/footer_mobile.webp");
-  background-size: cover;
-  background-position: bottom center;
+  // background-image: url("../images/backgrounds/footer_mobile.webp");
+  // background-size: cover;
+  // background-position: bottom center;
 
-  @include onTablet {
-    // height: 480px;
-    background-image: url("../images/backgrounds/footer_tablet.webp");
+  // @include onTablet {
+  //   height: 480px;
+  //   background-image: url("../images/backgrounds/footer_tablet.webp");
+  // }
 
-  }
-
-  @include onDesktop {
-    // height: 555px;
-    background-image: url("../images/backgrounds/footer_desktop.webp");
-  }
+  // @include onDesktop {
+  //   height: 555px;
+  //   background-image: url("../images/backgrounds/footer_desktop.webp");
+  // }
 
   // &__map {
   //   border: 0;
